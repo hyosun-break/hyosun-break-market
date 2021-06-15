@@ -1,4 +1,11 @@
-.contentContainer {
+@import '../../../styles/mixin', '../../../styles/variables';
+.container {
+  @include flex(center, center, column);
   width: 100%;
   min-height: 100%;
+  .inner {
+    width: 100%;
+    max-width: 1440px;
+    min-height: 100%;
+  }
 }

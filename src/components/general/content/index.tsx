@@ -42,9 +42,9 @@ export default function Content({ content }: contentType) {
   ));
 
   return (
-    <main className={styles.contentContainer}>
+    <main className={styles.container}>
       {contentHeader}
-      {content}
+      <div className={styles.inner}>{content}</div>
     </main>
   );
 }

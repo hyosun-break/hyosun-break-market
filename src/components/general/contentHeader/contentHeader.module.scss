@@ -1,13 +1,21 @@
 @import '../../../styles/mixin', '../../../styles/variables';
 
-.contentHeaderContainer {
-  @include flex(space-between, flex-start, column);
+.container {
+  @include flex(center, flex-start);
   width: 100%;
   height: 148px;
   padding: 36px 40px 0;
   background-color: $white;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
-  .title {
-    @include H1($blue);
+
+  .inner {
+    @include flex(space-between, flex-start, column);
+    max-width: 1440px;
+    width: 100%;
+    height: 100%;
+
+    .title {
+      @include H1($blue);
+    }
   }
 }
