@@ -15,17 +15,17 @@ export interface contentHeaderDataType {
 
 const contentHeaderData: contentHeaderDataType[] = [
   {
-    pathname: '/collection/[...tab]',
+    pathname: '/collection/[tab]',
     headerTitle: 'My Collection',
     tab: ['ALL SPORTS', 'BASEBALL', 'BASETBALL', 'FOOTBALL', 'SOCCER', 'SCC'],
   },
   {
-    pathname: '/watchlist/[...tab]',
+    pathname: '/watchlist/[tab]',
     headerTitle: 'Watchlist',
     tab: ['CARDS', 'PLAYERS'],
   },
   {
-    pathname: '/activity/[...tab]',
+    pathname: '/activity/[tab]',
     headerTitle: 'Activity',
     tab: ['OFFERS', 'PLAYERS', 'BOUGHT', 'SOLD'],
   },
