@@ -5,8 +5,8 @@ export default function Grading() {
   return (
     <div>
       <Head>
-        <title>break | collection</title>
-        <meta name="description" content="break market collection page" />
+        <title>break | Grading</title>
+        <meta name="description" content="break market Grading page" />
       </Head>
       <h1>grading page</h1>
     </div>
