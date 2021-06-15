@@ -24,11 +24,15 @@ export default function GradingCard({ data }: GradingCardProps) {
       <div className={styles.priceContainer}>
         <div>
           <p className={styles.minPrice}>₩{minPrice.toLocaleString()}</p>
-          <p className={styles.minPriceQuantity}>최저판매가 / 0{minPriceQuantity}개</p>
+          <p className={styles.minPriceQuantity}>
+            최저판매가 / {minPriceQuantity < 10 ? `0${minPriceQuantity}` : minPriceQuantity}개
+          </p>
         </div>
         <div>
           <p className={styles.maxPrice}>₩{maxPrice.toLocaleString()}</p>
-          <p className={styles.maxPriceQuantity}>최고판매가 / 0{maxPriceQuantity}개</p>
+          <p className={styles.maxPriceQuantity}>
+            최고판매가 / {maxPriceQuantity < 10 ? `0${maxPriceQuantity}` : maxPriceQuantity}개
+          </p>
         </div>
         <div>
           <p className={styles.lastPrice}>₩{lastPrice.toLocaleString()}</p>

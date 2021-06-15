@@ -1,17 +1,14 @@
 import Head from 'next/head';
-import Image from 'next/image';
+// import Image from 'next/image';
 
-export default function Home() {
+export default function Grading() {
   return (
     <div>
       <Head>
         <title>break | collection</title>
         <meta name="description" content="break market collection page" />
       </Head>
-
-      <main>
-        <h1>collection 페이지</h1>
-      </main>
+      <h1>grading page</h1>
     </div>
   );
 }
