@@ -1,0 +1,39 @@
+@font-face {
+  font-family: Montserrat-bold;
+  src: url('../../public/font/Montserrat-Bold.otf');
+}
+
+@font-face {
+  font-family: Montserrat-bold;
+  src: url('../../public/font/Montserrat-Bold.ttf');
+}
+
+@font-face {
+  font-family: NotoSansKR-bold;
+  src: url('../../public/font/NotoSansKR-Bold.otf');
+}
+
+@font-face {
+  font-family: NotoSansKR-bold;
+  src: url('../../public/font/NotoSansKR-Bold.ttf');
+}
+
+@font-face {
+  font-family: NotoSansKR-medium;
+  src: url('../../public/font/NotoSansKR-Medium.otf');
+}
+
+@font-face {
+  font-family: NotoSansKR-medium;
+  src: url('../../public/font/NotoSansKR-Medium.ttf');
+}
+
+@font-face {
+  font-family: NotoSansKR-regular;
+  src: url('../../public/font/NotoSansKR-Regular.otf');
+}
+
+@font-face {
+  font-family: NotoSansKR-regular;
+  src: url('../../public/font/NotoSansKR-Regular.ttf');
+}

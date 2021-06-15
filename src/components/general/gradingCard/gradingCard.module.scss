@@ -1,0 +1,66 @@
+@import '../../../styles/variables', '../../../styles/mixin';
+
+.gradingCardContainer {
+  width: 416px;
+  height: 145px;
+  background-color: $white;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  border-left: 10px solid #c4c4c4;
+  padding: 12px;
+
+  .titleContainer {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.5px solid #c4c4c4;
+    margin-bottom: 8px;
+
+    .title {
+      @include T1();
+    }
+
+    .subTitle {
+      @include C1($dark_grey);
+      margin: 2px 0 6px;
+    }
+  }
+}
+
+.quantityContainer {
+  display: flex;
+  align-items: center;
+
+  .quantity {
+    @include T2($blue);
+    margin-right: 4px;
+  }
+
+  .quantityDescription {
+    @include C1($dark_grey);
+  }
+}
+
+.priceContainer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 12px;
+
+  .minPrice {
+    @include T2($purple);
+  }
+
+  .maxPrice {
+    @include T3();
+  }
+
+  .lastPrice {
+    @include T3();
+    text-align: right;
+  }
+
+  .minPriceQuantity,
+  .maxPriceQuantity,
+  .lastPriceDescription {
+    @include C1($dark_grey);
+  }
+}
