@@ -12,7 +12,7 @@ interface contentsType {
 
 export default function WatchList() {
   const router = useRouter();
-  const query = router.query['tab'];
+  const query = router.query['menu'];
 
   const contents: contentsType = {
     cards: <Cards />,

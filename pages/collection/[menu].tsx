@@ -15,7 +15,7 @@ interface contentsType {
 }
 export default function Collection() {
   const router = useRouter();
-  const query = router.query['tab'];
+  const query = router.query['menu'];
 
   const contents: contentsType = {
     allsports: <AllSports />,

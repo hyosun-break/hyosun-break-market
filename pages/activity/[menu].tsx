@@ -14,7 +14,7 @@ interface contentsType {
 }
 export default function Activity() {
   const router = useRouter();
-  const query = router.query['tab'];
+  const query = router.query['menu'];
   console.log('Activity', query);
 
   const contents: contentsType = {

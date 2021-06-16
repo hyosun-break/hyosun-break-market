@@ -6,17 +6,17 @@ export interface contentHeaderMenuType {
 
 export const contentHeaderMenuData: contentHeaderMenuType[] = [
   {
-    pathname: '/collection/[tab]',
+    pathname: '/collection/[menu]',
     headerTitle: 'My Collection',
     menu: ['ALL SPORTS', 'BASEBALL', 'BASETBALL', 'FOOTBALL', 'SOCCER', 'SCC'],
   },
   {
-    pathname: '/watchlist/[tab]',
+    pathname: '/watchlist/[menu]',
     headerTitle: 'Watchlist',
     menu: ['CARDS', 'PLAYERS'],
   },
   {
-    pathname: '/activity/[tab]',
+    pathname: '/activity/[menu]',
     headerTitle: 'Activity',
     menu: ['OFFERS', 'PLAYERS', 'BOUGHT', 'SOLD'],
   },
