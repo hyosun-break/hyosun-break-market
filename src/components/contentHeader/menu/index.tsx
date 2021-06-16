@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 // import { useRouter } from 'next/router';
 import styles from './menu.module.scss';
-import { contentHeaderDataType } from '../../content';
+import { contentHeaderMenuType } from '../../content/contentHeaderMenuData';
 
 interface menuType {
-  data: contentHeaderDataType;
+  data: contentHeaderMenuType;
 }
 
 /*
@@ -27,7 +27,7 @@ export default function Menu({ data }: menuType) {
       onClick={() => setMenuSelected(menuName)}
       className={menuSelected === menuName ? styles.active : ''}
     >
-      <Link href={`${pathname}/${menuName.replace(' ', '-').toLowerCase()}`}>{menuName}</Link>
+      <Link href={`${pathname}/${menuName.replace(' ', '').toLowerCase()}`}>{menuName}</Link>
     </li>
   ));
   return <ul className={styles.container}>{menuList}</ul>;
