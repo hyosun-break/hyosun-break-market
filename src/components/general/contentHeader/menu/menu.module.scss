@@ -1,6 +1,6 @@
-@import '../../../styles/mixin', '../../../styles/variables';
+@import '../../../../styles/mixin', '../../../../styles/variables';
 
-.tabContainer {
+.container {
   @include flex(flex-start, center);
   width: 100%;
 

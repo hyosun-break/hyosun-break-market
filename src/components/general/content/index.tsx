@@ -10,24 +10,24 @@ interface contentType {
 export interface contentHeaderDataType {
   pathname: string;
   headerTitle: string;
-  tab: string[];
+  menu: string[];
 }
 
 const contentHeaderData: contentHeaderDataType[] = [
   {
     pathname: '/collection/[tab]',
     headerTitle: 'My Collection',
-    tab: ['ALL SPORTS', 'BASEBALL', 'BASETBALL', 'FOOTBALL', 'SOCCER', 'SCC'],
+    menu: ['ALL SPORTS', 'BASEBALL', 'BASETBALL', 'FOOTBALL', 'SOCCER', 'SCC'],
   },
   {
     pathname: '/watchlist/[tab]',
     headerTitle: 'Watchlist',
-    tab: ['CARDS', 'PLAYERS'],
+    menu: ['CARDS', 'PLAYERS'],
   },
   {
     pathname: '/activity/[tab]',
     headerTitle: 'Activity',
-    tab: ['OFFERS', 'PLAYERS', 'BOUGHT', 'SOLD'],
+    menu: ['OFFERS', 'PLAYERS', 'BOUGHT', 'SOLD'],
   },
 ];
 
