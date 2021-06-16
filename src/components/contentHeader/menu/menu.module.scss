@@ -1,11 +1,10 @@
-@import '../../../../styles/mixin', '../../../../styles/variables';
+@import '../../../styles/mixin', '../../../styles/variables';
 
 .container {
   @include flex(flex-start, center);
   width: 100%;
 
   li {
-    // height: 33px;
     a {
       @include H3();
       display: block;

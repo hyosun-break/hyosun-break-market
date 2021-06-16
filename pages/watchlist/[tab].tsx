@@ -1,12 +1,25 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 // import Image from 'next/image';
-import Content from '@components/general/content';
+import Content from '@components/content';
+import { Cards, Players } from '@components/content/watchlist';
 
-// content props 에 각 탭에 맞는 데이터를 받아와 만든 render 컴포넌트를 넘겨주면 됩니다. 지금은 임시로 query 입력
+interface contentsType {
+  [key: string]: React.ReactElement;
+  cards: React.ReactElement;
+  players: React.ReactElement;
+}
+
 export default function WatchList() {
   const router = useRouter();
   const query = router.query['tab'];
+
+  const contents: contentsType = {
+    cards: <Cards />,
+    players: <Players />,
+  };
+
+  const Contents = contents[query as string];
 
   return (
     <div>
@@ -14,7 +27,7 @@ export default function WatchList() {
         <title>break | watchlist</title>
         <meta name="description" content="break market watchlist page" />
       </Head>
-      <Content content={query} />
+      <Content content={Contents} />
     </div>
   );
 }

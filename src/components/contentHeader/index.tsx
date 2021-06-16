@@ -1,9 +1,9 @@
 import styles from './contentHeader.module.scss';
-import { contentHeaderDataType } from '../content';
+import { contentHeaderMenuType } from '../content/contentHeaderMenuData';
 import Menu from './menu';
 
 interface contentHeaderType {
-  data: contentHeaderDataType;
+  data: contentHeaderMenuType;
 }
 
 export default function ContentHeader({ data }: contentHeaderType) {

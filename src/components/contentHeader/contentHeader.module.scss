@@ -1,4 +1,4 @@
-@import '../../../styles/mixin', '../../../styles/variables';
+@import '../../styles/mixin', '../../styles/variables';
 
 .container {
   @include flex(center, flex-start);
