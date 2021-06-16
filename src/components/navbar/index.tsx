@@ -27,7 +27,7 @@ const navbarData: navbarDataType[] = [
   {
     id: 3,
     pageName: 'COLLECTION',
-    path: '/collection/all-sports',
+    path: '/collection/allsports',
   },
   {
     id: 4,

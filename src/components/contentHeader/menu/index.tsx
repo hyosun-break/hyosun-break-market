@@ -16,7 +16,7 @@ interface menuType {
   }
 */
 /* ex) 주소가 'activity/무엇무엇' 동적라우팅 */
-/* menuName에 공백 포함시 - 로 교체 (replace함수) */
+/* menuName에 공백 포함시 공백 제거 (replace함수) */
 export default function Menu({ data }: menuType) {
   const [menuSelected, setMenuSelected] = useState<string | undefined>(data.menu[0]);
   const pathname = data.pathname.split('/[')[0];
