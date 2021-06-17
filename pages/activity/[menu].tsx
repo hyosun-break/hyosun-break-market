@@ -1,21 +1,15 @@
 import React from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-// import Image from 'next/image';
 import Content from '@components/content';
 import { Offers, Players, Bought, Sold } from '@components/content/activity';
 
 interface contentsType {
   [key: string]: React.ReactElement;
-  offers: React.ReactElement;
-  players: React.ReactElement;
-  bought: React.ReactElement;
-  sold: React.ReactElement;
 }
 export default function Activity() {
   const router = useRouter();
   const query = router.query['menu'];
-  console.log('Activity', query);
 
   const contents: contentsType = {
     offers: <Offers />,

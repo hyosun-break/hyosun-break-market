@@ -1,17 +1,10 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-// import Image from 'next/image';
 import Content from '@components/content';
 import { AllSports, Baseball, Basetball, Football, Soccer, Scc } from '@components/content/collection';
 
 interface contentsType {
   [key: string]: React.ReactElement;
-  allsports: React.ReactElement;
-  baseball: React.ReactElement;
-  basetball: React.ReactElement;
-  football: React.ReactElement;
-  soccer: React.ReactElement;
-  scc: React.ReactElement;
 }
 export default function Collection() {
   const router = useRouter();

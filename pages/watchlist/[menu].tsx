@@ -1,13 +1,10 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-// import Image from 'next/image';
 import Content from '@components/content';
 import { Cards, Players } from '@components/content/watchlist';
 
 interface contentsType {
   [key: string]: React.ReactElement;
-  cards: React.ReactElement;
-  players: React.ReactElement;
 }
 
 export default function WatchList() {
