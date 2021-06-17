@@ -22,12 +22,12 @@ export default function Collection() {
   const Contents = contents[query as string];
 
   return (
-    <div>
+    <>
       <Head>
         <title>break | collection</title>
         <meta name="description" content="break market collection page" />
       </Head>
       <Content content={Contents} />
-    </div>
+    </>
   );
 }

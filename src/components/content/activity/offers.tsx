@@ -4,17 +4,23 @@ import Link from 'next/link';
 interface cardListDataType {
   id: number;
   name: string;
+  cardNumber: string;
+  tag: string;
 }
 
 // 임시
 export const cardListData: cardListDataType[] = [
   {
     id: 0,
-    name: '효이슨',
+    name: 'Zion Williamson',
+    cardNumber: '#248',
+    tag: 'SILVER',
   },
   {
     id: 1,
-    name: '제이슨',
+    name: 'Hyo sun Kim',
+    cardNumber: '#218',
+    tag: 'RED',
   },
 ];
 

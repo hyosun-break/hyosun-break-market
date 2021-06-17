@@ -19,12 +19,12 @@ export default function WatchList() {
   const Contents = contents[query as string];
 
   return (
-    <div>
+    <>
       <Head>
         <title>break | watchlist</title>
         <meta name="description" content="break market watchlist page" />
       </Head>
       <Content content={Contents} />
-    </div>
+    </>
   );
 }
