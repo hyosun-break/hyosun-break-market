@@ -5,7 +5,7 @@ import { contentHeaderMenuData } from './contentHeaderMenuData';
 import ContentHeader from '../contentHeader';
 
 interface contentType {
-  content: any;
+  content: React.ReactElement;
 }
 
 export default function Content({ content }: contentType) {
