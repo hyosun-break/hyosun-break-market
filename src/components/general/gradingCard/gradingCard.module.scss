@@ -1,13 +1,15 @@
 @import '../../../styles/variables', '../../../styles/mixin';
 
-.gradingCardContainer {
+.container {
   width: 416px;
   height: 145px;
-  background-color: $white;
+  padding: 12px;
+  margin-bottom: 14px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  background-color: $white;
   border-radius: 5px;
   border-left: 10px solid #c4c4c4;
-  padding: 12px;
+  cursor: pointer;
 
   .titleContainer {
     display: flex;
@@ -24,6 +26,11 @@
       margin: 2px 0 6px;
     }
   }
+}
+
+.active {
+  border: 1px solid $blue;
+  border-left: 10px solid $blue;
 }
 
 .quantityContainer {

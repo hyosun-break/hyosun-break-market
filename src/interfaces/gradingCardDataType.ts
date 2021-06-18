@@ -9,3 +9,7 @@ export interface gradingCardDataType {
   maxPriceQuantity: number;
   lastPrice: number;
 }
+
+export interface selectedGradingCardDataType extends gradingCardDataType {
+  active?: boolean;
+}

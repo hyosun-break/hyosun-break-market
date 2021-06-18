@@ -4,7 +4,7 @@
 // ex) @include H1($blue);
 @mixin H1($color: $black) {
   font-family: Montserrat-bold;
-  font-size: 2rem; /* 32px */
+  font-size: 2.3rem;
   font-weight: 700;
   line-height: 2.4375rem; /* 39px */
   color: $color;
@@ -12,7 +12,7 @@
 
 @mixin H2($color: $black) {
   font-family: Montserrat-bold;
-  font-size: 1.5rem; /* 24px */
+  font-size: 1.7rem;
   font-weight: 700;
   line-height: 1.83125rem; /* 39px */
   color: $color;
@@ -20,7 +20,7 @@
 
 @mixin H3($color: $black) {
   font-family: Montserrat-bold;
-  font-size: 0.875rem; /* 14px */
+  font-size: 1rem;
   font-weight: 700;
   line-height: 2.4375rem; /* 39px */
   color: $color;
@@ -28,7 +28,7 @@
 
 @mixin T1($color: $black) {
   font-family: NotoSansKR-bold;
-  font-size: 1.25rem; /* 20px */
+  font-size: 1.4rem;
   font-weight: 700;
   line-height: 1.7rem; /* 27.2px */
   color: $color;
@@ -36,7 +36,7 @@
 
 @mixin T2($color: $black) {
   font-family: NotoSansKR-bold;
-  font-size: 0.875rem; /* 14px */
+  font-size: 1rem;
   font-weight: 700;
   line-height: 1.26875rem; /* 20.3px */
   color: $color;
@@ -44,7 +44,7 @@
 
 @mixin T3($color: $black) {
   font-family: NotoSansKR-regular;
-  font-size: 0.875rem; /* 14px */
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.26875rem;
   color: $color;
@@ -52,7 +52,7 @@
 
 @mixin T4($color: $black) {
   font-family: NotoSansKR-bold;
-  font-size: 0.75rem; /* 12px */
+  font-size: 0.85rem;
   font-weight: 700;
   line-height: 1.0875rem; /* 17.4px */
   color: $color;
@@ -60,7 +60,7 @@
 
 @mixin T5($color: $black) {
   font-family: NotoSansKR-regular;
-  font-size: 0.75rem; /* 12px */
+  font-size: 0.85rem;
   font-weight: 400;
   line-height: 1.0875rem; /* 17.4px */
   color: $color;
@@ -68,7 +68,7 @@
 
 @mixin T6($color: $black) {
   font-family: NotoSansKR-medium;
-  font-size: 0.625rem; /* 10px */
+  font-size: 0.75rem;
   font-weight: 500;
   line-height: 0.90625rem; /* 14.5px */
   color: $color;
@@ -76,9 +76,9 @@
 
 @mixin C1($color: $black) {
   font-family: NotoSansKR-regular;
-  font-size: 0.5rem; /* 8px */
+  font-size: 0.65rem;
   font-weight: 400;
-  line-height: 0.725rem; /* 11.6px */
+  line-height: 0.90625rem; /* 14.5px */
   color: $color;
 }
 
