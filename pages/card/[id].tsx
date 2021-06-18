@@ -1,17 +1,31 @@
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
-import { cardListData } from '@components/content/activity/offers';
+import GradingCard from '@components/general/gradingCard';
+import CardInfoHeader from '@components/view/card/cardInfoHeader';
 import styles from './cardPage.module.scss';
 
+import { gradingCardData } from '@components/general/gradingCard/gradingCardData';
+import { gradingCardDataType, selectedGradingCardDataType } from '@interfaces/gradingCardDataType';
+
+// useState, useEffect 임시
 export default function Card() {
-  const router = useRouter();
-  const query = router.query['id'];
-  // 추후 카드 데이터 요청시 query 값으로 요청하면 될 거 같아요
-  // 선수 카드 정보를 id값으로 요청하는지 다른 걸로 요청하는진 모르지만 흐름은 다르지 않을 것으로 예상
-  console.log('card Router', query);
+  const [data, setData] = useState<gradingCardDataType[] | null>(null);
 
-  const cardName = cardListData.find((data) => String(data.id) === query);
+  const onSelected = (id: number) => {
+    let arr: selectedGradingCardDataType[] = [...data];
+    arr = arr.map((item) => ({ ...item, active: item.id === id }));
+    setData(arr);
+  };
 
+  useEffect(() => {
+    setData(gradingCardData);
+  }, []);
+
+  const gradingCardList = data?.map((card) => (
+    <GradingCard key={card.id} data={card} onSelected={() => onSelected(card.id)} />
+  ));
+
+  if (!data) return <p>Loading...</p>;
   return (
     <>
       <Head>
@@ -20,26 +34,22 @@ export default function Card() {
       </Head>
 
       <main className={styles.container}>
-        {/* <h1>{cardName.name}씨의 카드 정보 입니다.</h1> */}
-        <div className={styles.cardHeader}>
-          <div className={styles.cardHeaderInner}>
-            <div className={styles.cardImgBox} />
-            <div className={styles.cardInfo}>
-              <p className={styles.cardCategory}>2019-20 Panini Prizm Basketball • Base</p>
-              <h2 className={styles.name}>Zion Williamson #248</h2>
-            </div>
-            <div className={styles.playerInfo}>
-              <button className={styles.addWatchlistBtn}>☆ Add to watchlist</button>
-              <div className={styles.playerImgBox} />
-            </div>
-          </div>
-        </div>
+        <CardInfoHeader />
         <div className={styles.sectionContainer}>
           <section>
             <h2>Select card grade</h2>
+            {gradingCardList}
           </section>
           <section>
             <h2>Sales history</h2>
+            <div className={styles.historyContainer}>
+              <div className={styles.historyTitleContainer}>
+                <h3 className={styles.saleDateTitle}>Sale date</h3>
+                <h3 className={styles.gradeTitle}>Grade</h3>
+                <h3 className={styles.myTradesTitle}>My trades</h3>
+                <h3 className={styles.priceTitle}>Price</h3>
+              </div>
+            </div>
           </section>
           <section>
             <h2>Other parellels</h2>
