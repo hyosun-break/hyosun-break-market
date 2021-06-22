@@ -1,0 +1,29 @@
+@import '../../../styles/mixin', '../../../styles/variables';
+
+.submitButton {
+  width: 144px;
+  height: 34px;
+  line-height: 34px;
+  margin-top: 15px;
+  background-color: $purple;
+  border-radius: 5px;
+  @include T5();
+  color: $white;
+}
+.large {
+  width: 200px;
+  height: 48px;
+}
+
+.small {
+  @include T2($white);
+  width: 122px;
+  height: 38px;
+  line-height: 38px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.blue {
+  background-color: $blue;
+}

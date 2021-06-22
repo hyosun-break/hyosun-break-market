@@ -1,19 +1,23 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import GradingCard from '@components/general/gradingCard';
-import CardInfoHeader from '@components/view/card/cardInfoHeader';
-import styles from './cardPage.module.scss';
+import CardInfoHeader from '@components/View/Card/CardInfoHeader';
+import TradeCard from '@components/View/Card/TradeCard';
+import styles from './index.module.scss';
 
 import { gradingCardData } from '@components/general/gradingCard/gradingCardData';
-import { gradingCardDataType, selectedGradingCardDataType } from '@interfaces/gradingCardDataType';
+import { gradingCardDataType, selectedGradingCardDataType } from '@types/gradingCardDataType';
 
 // useState, useEffect 임시
-export default function Card() {
+export default function CardPage() {
   const [data, setData] = useState<gradingCardDataType[] | null>(null);
+  const [selectedGradingCard, setSelectedGradingCard] = useState<selectedGradingCardDataType | null>(null);
 
   const onSelected = (id: number) => {
     let arr: selectedGradingCardDataType[] = [...data];
     arr = arr.map((item) => ({ ...item, active: item.id === id }));
+    const selected = arr.find((item) => item.active);
+    setSelectedGradingCard(selected);
     setData(arr);
   };
 
@@ -38,16 +42,30 @@ export default function Card() {
         <div className={styles.sectionContainer}>
           <section>
             <h2>Select card grade</h2>
-            {gradingCardList}
+            <div className={styles.row}>
+              <div>{gradingCardList}</div>
+              <TradeCard card={selectedGradingCard} />
+            </div>
           </section>
           <section>
             <h2>Sales history</h2>
             <div className={styles.historyContainer}>
               <div className={styles.historyTitleContainer}>
-                <h3 className={styles.saleDateTitle}>Sale date</h3>
-                <h3 className={styles.gradeTitle}>Grade</h3>
-                <h3 className={styles.myTradesTitle}>My trades</h3>
-                <h3 className={styles.priceTitle}>Price</h3>
+                <div>
+                  <h3 className={styles.saleDateTitle}>Sale date</h3>
+                  <p>5/5</p>
+                </div>
+                <div>
+                  <h3 className={styles.gradeTitle}>Grade</h3>
+                  <p>break A</p>
+                </div>
+                <div>
+                  <h3 className={styles.myTradesTitle}>My trades</h3>
+                </div>
+                <div>
+                  <h3 className={styles.priceTitle}>Price</h3>
+                  <p>₩290,000</p>
+                </div>
               </div>
             </div>
           </section>

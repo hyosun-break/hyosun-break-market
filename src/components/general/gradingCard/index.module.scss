@@ -41,10 +41,10 @@
     @include T2($blue);
     margin-right: 4px;
   }
+}
 
-  .quantityDescription {
-    @include C1($dark_grey);
-  }
+.quantityDescription {
+  @include C1($dark_grey);
 }
 
 .priceContainer {
@@ -60,13 +60,21 @@
     @include T3();
   }
 
+  .row {
+    display: flex;
+  }
+
   .lastPrice {
     @include T3();
     text-align: right;
   }
 
   .minPriceQuantity,
-  .maxPriceQuantity,
+  .maxPriceQuantity {
+    @include C1($purple);
+    margin-left: 5px;
+  }
+
   .lastPriceDescription {
     @include C1($dark_grey);
   }
