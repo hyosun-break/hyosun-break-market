@@ -1,4 +1,4 @@
-import { gradingCardDataType } from '@types/gradingCardDataType';
+import { gradingCardDataType } from '@type/gradingCardDataType';
 
 export const gradingCardData: gradingCardDataType[] = [
   {

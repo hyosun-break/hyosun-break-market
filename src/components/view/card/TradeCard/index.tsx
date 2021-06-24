@@ -1,6 +1,6 @@
-import SubmitButton from '@components/general/SubmitButton';
+import SubmitButton from '@components/general/submitButton';
 import styles from './index.module.scss';
-import { selectedGradingCardDataType } from '@types/gradingCardDataType';
+import { selectedGradingCardDataType } from '@type/gradingCardDataType';
 
 interface tradeCardProps {
   card?: selectedGradingCardDataType;

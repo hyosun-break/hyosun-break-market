@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import GradingCard from '@components/general/gradingCard';
-import CardInfoHeader from '@components/View/Card/CardInfoHeader';
-import TradeCard from '@components/View/Card/TradeCard';
+import CardInfoHeader from '@components/view/Card/CardInfoHeader';
+import TradeCard from '@components/view/Card/TradeCard';
 import styles from './index.module.scss';
 
 import { gradingCardData } from '@components/general/gradingCard/gradingCardData';
-import { gradingCardDataType, selectedGradingCardDataType } from '@types/gradingCardDataType';
+import { gradingCardDataType, selectedGradingCardDataType } from '@typ/egradingCardDataType';
 
 // useState, useEffect 임시
 export default function CardPage() {

@@ -1,6 +1,6 @@
 import styles from './index.module.scss';
 import classNames from 'classnames/bind';
-import { selectedGradingCardDataType } from '@types/gradingCardDataType';
+import { selectedGradingCardDataType } from '@type/gradingCardDataType';
 
 interface GradingCardProps {
   onSelected: () => void;
